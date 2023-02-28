@@ -43,3 +43,6 @@ RUN  cd /usr/local && \
      rm -f elixir-otp-25.zip
 RUN  localedef -c -f UTF-8 -i en_US en_US.UTF-8
 ENV  LC_ALL=en_US.UTF-8
+
+RUN  mix local.hex --force
+RUN  mix local.rebar --force
